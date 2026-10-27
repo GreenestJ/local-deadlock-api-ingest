@@ -128,7 +128,7 @@ impl Salts {
             debug!("Ingesting salts: {self:?} (retry {attempt}/{max_retries})");
             let response = HTTP_CLIENT
                 .get_or_init(ureq::Agent::new_with_defaults)
-                .post("https://api.deadlock-api.com/v1/matches/salts")
+                .post("http://localhost:3000/v1/matches/salts")
                 .send_json([self]);
             match response {
                 Ok(r) if r.status().is_success() => {
@@ -167,7 +167,7 @@ impl Salts {
 
             let response = HTTP_CLIENT
                 .get_or_init(ureq::Agent::new_with_defaults)
-                .post("https://api.deadlock-api.com/v1/matches/salts")
+                .post("http://localhost:3000/v1/matches/salts")
                 .send_json(salts);
             match response {
                 Ok(r) if r.status().is_success() => {
