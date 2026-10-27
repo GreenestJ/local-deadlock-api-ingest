@@ -1,3 +1,7 @@
+# IGNORE 90% OF THIS ITS FOR STANDARD NOT FOR THE LOCAL VERSION OF THE INGEST
+
+---
+
 # Deadlock API Ingest
 
 A lightweight background tool that monitors your Steam HTTP cache for Deadlock game replay files and automatically submits match metadata to the Deadlock API. This helps build a comprehensive database of Deadlock matches for the community.
